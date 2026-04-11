@@ -8,7 +8,7 @@ function isValid(hash: string): boolean {
 }
 
 function getHash() {
-  const hash = window.location.hash.slice(1);
+  const hash = window.location.hash;
 
   if (!hash || !isValid(hash)) {
     let id = "";
@@ -19,7 +19,7 @@ function getHash() {
     return id;
   }
 
-  return hash;
+  return window.location.hash.slice(1);
 }
 
 function useHash() {
